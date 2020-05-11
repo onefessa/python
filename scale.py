@@ -15,13 +15,13 @@ im1=imread(inputfile)
 h=len(im1)      # высота изображения = длина списка строк изображения
 w=len(im1[0])   # ширина изображения = длина списка одной строки
 print('width=',w, 'height=',h, 'size=',w*h*4)
-
+k = w-1
 im2=np.ones((n*h,n*w,3))
 im1=im1.astype('uint8')
 im2=im2.astype('uint8')
 
 for ix in range (0, w):
-    print(ix);
+    print(ix, '/', k);
     for iy in range(0, h):
         for i in range ((ix)*n,(ix+1)*n):
             for j in range ((iy)*n,(iy+1)*n):
